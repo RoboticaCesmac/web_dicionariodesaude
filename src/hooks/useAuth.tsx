@@ -4,7 +4,7 @@ import { authApi } from '../data/repo'
 type AuthCtx = {
   loading:boolean
   user:any
-  signIn:(email:string,password:string)=>Promise<void>
+  signIn:(email:string,password:string)=>Promise<{ uid:string; profile:any }>
   signUp:(nome:string,email:string,password:string)=>Promise<void>
   signOut:()=>Promise<void>
 }
